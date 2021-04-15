@@ -108,7 +108,7 @@ def login():
                 login_user(user, remember=form.remember.data)
                 return redirect(url_for('dashboard'))
 
-        return '<h1>Invalid username or password</h1>'
+        return '<h1>Invalid Username or Password</h1>'
         #return '<h1>' + form.username.data + ' ' + form.password.data + '</h1>'
 
     return render_template('login2.html', form=form)
@@ -185,4 +185,4 @@ if __name__ == "__main__":
         http_server = HTTPServer(WSGIContainer(app))
         logging.debug("\nStarted Server, Kindly visit http://localhost:" + str(port))
         http_server.listen(port)
-        tornado.ioloop.IOLoop.current().start()
+        tornado.ioloop.IOLoop.instance().start()

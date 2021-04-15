@@ -160,10 +160,10 @@ def streammp3(stream_id):
             
                 song = item['link']
         with open(song, "rb") as fwav:
-            data = fwav.read()
+            data = fwav.read(10024)
             while data:
                 yield data
-                data = fwav.read()
+                data = fwav.read(10024)
                 logging.debug('Music data fragment : ' + str(count))
                 count += 1
                 

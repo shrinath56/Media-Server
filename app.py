@@ -34,25 +34,24 @@ web = True
 
 def return_dict():
     #Dictionary to store music file information
-    dict_here = [
-        {'id': 1, 'name': 'Astronaut in the Ocean	', 'link': 'music/masked_wolf_astronaut.mp3', 'genre': 'General', 'rating': 4},
-        {'id': 2, 'name': 'Kohinoor','link': 'music/divine_kohinoor.mp3', 'genre': 'Indian Rap', 'rating': 5},
-        {'id': 3, 'name': 'Mirchi ft.DIVINE', 'link': 'music/divine_mirchi.mp3', 'genre': 'Indian Rap', 'rating': 4},
-		{'id': 4, 'name': 'Lut Gaye', 'link': 'music/lut_gaye_lyrics.mp3', 'genre': 'Bollywood', 'rating': 4},
-		{'id': 5, 'name': 'Chal Bombay', 'link': 'music/divine_chal_bombay.mp3', 'genre': 'Indian Rap', 'rating': 4},
-		{'id': 6, 'name': 'Khairiyat', 'link': 'music/lyrical_khairiyat_chhichhore.mp3', 'genre': 'Bollywood','rating': 5},
-		{'id': 7, 'name': 'Mauli Mauli (Marathi)', 'link': 'music/lai_bhaari_mauli.mp3', 'genre': 'Devotional', 'rating': 5},
-		{'id': 8, 'name': 'Vaathi Coming', 'link': 'music/master_vaathi_coming.mp3', 'genre': 'Tollywood', 'rating': 3},
-		{'id': 9, 'name': 'O Saathi', 'link': 'music/O_Saathi_Baaghi_2.mp3', 'genre': 'Bollywood', 'rating': 4},
-		{'id': 10, 'name': 'Taarefan', 'link': 'music/Taarefan.mp3', 'genre': 'Bollywood', 'rating': 3},
-		{'id': 11, 'name': 'Zingaat', 'link': 'music/Zingaat.mp3', 'genre': 'Marathi', 'rating': 5},
-		{'id': 12, 'name': 'Brown Rang', 'link': 'music/Brown_Rang _Yo_Yo_HoneySingh.mp3', 'genre': 'Rap', 'rating': 4.5},
-		{'id': 13, 'name': 'Demo Video', 'link': 'music/demovideo.mp4', 'genre': 'Cartoon:Video', 'rating': 4.5},
-		{'id': 14, 'name': 'Machayenge-Emiway', 'link': 'music/machayenge_v.mp4', 'genre': 'Video Song', 'rating': 5},
-		{'id': 15, 'name': 'Brown Munde', 'link': 'music/brown_munde.mp4', 'genre': 'Video Song', 'rating': 5}
-		
-		]
-    return dict_here
+ dict_here = [
+	    {'id': 1, 'name': 'Astronaut in the Ocean	', 'link': 'music/masked_wolf_astronaut.mp3', 'genre': 'General', 'rating': 4},
+	    {'id': 2, 'name': 'Kohinoor','link': 'music/divine_kohinoor.mp3', 'genre': 'Indian Rap', 'rating': 5},
+	    {'id': 3, 'name': 'Mirchi ft.DIVINE', 'link': 'music/divine_mirchi.mp3', 'genre': 'Indian Rap', 'rating': 4},
+	    {'id': 4, 'name': 'Lut Gaye', 'link': 'music/lut_gaye_lyrics.mp3', 'genre': 'Bollywood', 'rating': 4},
+	    {'id': 5, 'name': 'Chal Bombay', 'link': 'music/divine_chal_bombay.mp3', 'genre': 'Indian Rap', 'rating': 4},
+	    {'id': 6, 'name': 'Khairiyat', 'link': 'music/lyrical_khairiyat_chhichhore.mp3', 'genre': 'Bollywood','rating': 5},
+	    {'id': 7, 'name': 'Mauli Mauli (Marathi)', 'link': 'music/lai_bhaari_mauli.mp3', 'genre': 'Devotional', 'rating': 5},
+	    {'id': 8, 'name': 'Vaathi Coming', 'link': 'music/master_vaathi_coming.mp3', 'genre': 'Tollywood', 'rating': 3},
+	    {'id': 9, 'name': 'O Saathi', 'link': 'music/O_Saathi_Baaghi_2.mp3', 'genre': 'Bollywood', 'rating': 4},
+	    {'id': 10, 'name': 'Taarefan', 'link': 'music/Taarefan.mp3', 'genre': 'Bollywood', 'rating': 3},
+	    {'id': 11, 'name': 'Zingaat', 'link': 'music/Zingaat.mp3', 'genre': 'Marathi', 'rating': 5},
+	    {'id': 12, 'name': 'Brown Rang', 'link': 'music/Brown_Rang _Yo_Yo_HoneySingh.mp3', 'genre': 'Rap', 'rating': 4.5},
+	    {'id': 13, 'name': 'Demo Video', 'link': 'music/demovideo.mp4', 'genre': 'Cartoon:Video', 'rating': 4.5},
+	    {'id': 14, 'name': 'Machayenge-Emiway', 'link': 'music/machayenge_v.mp4', 'genre': 'Video Song', 'rating': 5},
+	    {'id': 15, 'name': 'Brown Munde', 'link': 'music/brown_munde.mp4', 'genre': 'Video Song', 'rating': 5}
+	]
+ return dict_here
 
 # To execute commands outside of Python
 def run_cmd(cmd):
@@ -185,4 +184,4 @@ if __name__ == "__main__":
         http_server = HTTPServer(WSGIContainer(app))
         logging.debug("\nStarted Server, Kindly visit http://localhost:" + str(port))
         http_server.listen(port)
-        tornado.ioloop.IOLoop.instance().start()
+        tornado.ioloop.IOLoop.current().start()

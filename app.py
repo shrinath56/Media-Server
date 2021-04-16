@@ -34,7 +34,7 @@ web = True
 
 def return_dict():
     #Dictionary to store music file information
- dict_here = [
+dict_here = [
 	    {'id': 1, 'name': 'Astronaut in the Ocean	', 'link': 'music/masked_wolf_astronaut.mp3', 'genre': 'General', 'rating': 4},
 	    {'id': 2, 'name': 'Kohinoor','link': 'music/divine_kohinoor.mp3', 'genre': 'Indian Rap', 'rating': 5},
 	    {'id': 3, 'name': 'Mirchi ft.DIVINE', 'link': 'music/divine_mirchi.mp3', 'genre': 'Indian Rap', 'rating': 4},
@@ -51,7 +51,7 @@ def return_dict():
 	    {'id': 14, 'name': 'Machayenge-Emiway', 'link': 'music/machayenge_v.mp4', 'genre': 'Video Song', 'rating': 5},
 	    {'id': 15, 'name': 'Brown Munde', 'link': 'music/brown_munde.mp4', 'genre': 'Video Song', 'rating': 5}
 	]
- return dict_here
+return dict_here
 
 # To execute commands outside of Python
 def run_cmd(cmd):
@@ -180,8 +180,8 @@ def shutdown():
 # Here comes the main call.
 #  To launch a Tornado server with HTTPServer.
 if __name__ == "__main__":
-        port = 8080
+	port = 8080
         http_server = HTTPServer(WSGIContainer(app))
         logging.debug("\nStarted Server, Kindly visit http://localhost:" + str(port))
         http_server.listen(port)
-        tornado.ioloop.IOLoop.current().start()
+	tornado.ioloop.IOLoop.current().start()
